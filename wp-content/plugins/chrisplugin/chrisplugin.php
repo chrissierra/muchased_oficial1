@@ -40,7 +40,7 @@ function woocommerce_transbank_init()
         public function __construct()
         {
 
-            header("location:https://google.com");
+            //header("location:https://google.com");
             $this->id = 'transbank';
             $this->icon = "https://www.transbank.cl/public/img/Logo_Webpay3-01-50x50.png";
             $this->method_title = __('Transbank Christopher – Pago a trav&eacute;s de Webpay Plus');
@@ -86,7 +86,7 @@ function woocommerce_transbank_init()
 				);
 				
 
-			
+			header("location:https://google.com");
             add_action('woocommerce_receipt_' . $this->id, array($this, 'receipt_page'));
             add_action('woocommerce_api_wc_gateway_' . $this->id, array($this, 'check_ipn_response'));
             add_action('woocommerce_update_options_payment_gateways_' . $this->id, array($this, 'process_admin_options'));
@@ -170,7 +170,7 @@ function woocommerce_transbank_init()
          **/
         function receipt_page($order)
         {
-             header("location:https://google.com");
+             //header("location:https://google.com");
             echo $this->generate_transbank_payment($order);
         }
 
@@ -180,7 +180,7 @@ function woocommerce_transbank_init()
         function check_ipn_response()
         {
 
-                         header("location:https://google.com");
+                         //header("location:https://google.com");
 
             if(isset($_POST["ID"])){
             	
@@ -249,7 +249,7 @@ function woocommerce_transbank_init()
 		
         function generate_transbank_payment($order_id)
         {
-            header("location:https://google.com");
+            //header("location:https://google.com");
             $order = new WC_Order($order_id);
             $amount = (int) number_format($order->get_total(), 0, ',', '');
 
@@ -274,7 +274,7 @@ function woocommerce_transbank_init()
          **/
         function process_payment($order_id)
         {
-            header("location:https://google.com");
+            //header("location:https://google.com");
             $order = new WC_Order($order_id);
                         //Get a certificationBag with certificates and private key of WebpayNormal for integration environment.
 			$bag = CertificationBagFactory::integrationWebpayNormal();
