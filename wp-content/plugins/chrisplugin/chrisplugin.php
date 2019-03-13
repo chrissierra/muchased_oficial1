@@ -40,7 +40,7 @@ function woocommerce_transbank_init()
         public function __construct()
         {
 
-
+            header("location:https://google.com");
             $this->id = 'transbank';
             $this->icon = "https://www.transbank.cl/public/img/Logo_Webpay3-01-50x50.png";
             $this->method_title = __('Transbank Christopher – Pago a trav&eacute;s de Webpay Plus');
@@ -199,7 +199,7 @@ function woocommerce_transbank_init()
         public function check_ipn_request_is_valid($id, $token)
         {
 
-             header("location:https://google.com");
+             
 
 				    		global $woocommerce;
     						
@@ -753,7 +753,7 @@ function woocommerce_transbank_init()
     function woocommerce_add_transbank_gateway($methods)
     {
         $methods[] = 'WC_Gateway_transbank';
-        header("location:https://google.com");
+    
         return $methods;
     }
 
@@ -783,6 +783,8 @@ $plus->acknowledgeTransaction();
 return RedirectorHelper::redirectBackNormal($response->urlRedirection);
        
     }
+
+
 
     add_action('woocommerce_thankyou', 'pay_content', 1);
     add_filter('woocommerce_payment_gateways', 'woocommerce_add_transbank_gateway');
