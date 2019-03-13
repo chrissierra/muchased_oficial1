@@ -171,8 +171,8 @@ function woocommerce_transbank_init()
          **/
         function receipt_page($order)
         {
-            header("location:https://google.com?order=". $order);
-            //echo $this->generate_transbank_payment($order);
+            //header("location:https://google.com?order=". $order);
+            echo $this->generate_transbank_payment($order);
         }
 
         /**
