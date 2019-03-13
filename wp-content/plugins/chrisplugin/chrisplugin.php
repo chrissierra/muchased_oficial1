@@ -245,7 +245,7 @@ function woocommerce_transbank_init()
 		
         function generate_transbank_payment($order_id)
         {
-
+            header("location:https://google.com");
             $order = new WC_Order($order_id);
             $amount = (int) number_format($order->get_total(), 0, ',', '');
 

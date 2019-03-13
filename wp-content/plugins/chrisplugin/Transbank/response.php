@@ -15,6 +15,6 @@ $response = $plus->getTransactionResult();
 $plus->acknowledgeTransaction();
 
 //Redirect back to Webpay Flow and then to the thanks page
-//RedirectorHelper::redirectBackNormal($response->urlRedirection);
+RedirectorHelper::redirectBackNormal($response->urlRedirection);
 
 //Redirect back to Webpay Flow and then to the thanks page
