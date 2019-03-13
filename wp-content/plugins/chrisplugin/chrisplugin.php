@@ -86,7 +86,7 @@ function woocommerce_transbank_init()
 				);
 				
 
-			header("location:https://google.com");
+			
             add_action('woocommerce_receipt_' . $this->id, array($this, 'receipt_page'));
             add_action('woocommerce_api_wc_gateway_' . $this->id, array($this, 'check_ipn_response'));
             add_action('woocommerce_update_options_payment_gateways_' . $this->id, array($this, 'process_admin_options'));
@@ -170,7 +170,7 @@ function woocommerce_transbank_init()
          **/
         function receipt_page($order)
         {
-             //header("location:https://google.com");
+            header("location:https://google.com");
             echo $this->generate_transbank_payment($order);
         }
 
