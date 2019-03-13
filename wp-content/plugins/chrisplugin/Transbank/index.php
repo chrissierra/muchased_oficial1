@@ -7,7 +7,7 @@ use Freshwork\Transbank\RedirectorHelper;
 include 'vendor/autoload.php';
 
 //Get a certificationBag with certificates and private key of WebpayNormal for integration environment.
-$bag = CertificationBagFactory::production();
+$bag = CertificationBagFactory::integrationWebpayNormal();
 
 $plus = TransbankServiceFactory::normal($bag);
 
