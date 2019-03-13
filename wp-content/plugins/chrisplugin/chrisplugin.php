@@ -215,7 +215,7 @@ function woocommerce_transbank_init()
 
 
  				//	header("location:".$token);
-							header("location:http://localhost/Transbank/gracias.php?token=".$token);
+							header("location:https://muchased.cl/transbank/gracias.php?token=".$token);
 //header('location:pico');
 
 							//redirect('https://webpay3gint.transbank.cl/webpayserver/voucher.cgi', $_GET['token']);
@@ -258,7 +258,7 @@ function woocommerce_transbank_init()
 			//Para transacciones normales, solo se puede añadir una linea de detalle de transacción.
 			$plus->addTransactionDetail($amount, $order_id); //Amount and BuyOrder
 
-			$response = $plus->initTransaction('http://localhost/Transbank/response.php?orderID='.$order_id, 'http://localhost/Transbank/gracias.php?orderID='.$order_id);
+			$response = $plus->initTransaction('https://muchased.cl/transbank/response.php?orderID='.$order_id, 'https://muchased.cl/transbank/gracias.php?orderID='.$order_id);
 
 			echo  $response->token;
 
@@ -280,7 +280,7 @@ function woocommerce_transbank_init()
 			//Para transacciones normales, solo se puede añadir una linea de detalle de transacción.
 			$plus->addTransactionDetail(990, 'Orden824201'); //Amount and BuyOrder
 
-			$response = $plus->initTransaction('http://localhost/Transbank/response.php', 'http://localhost/wordpress/Transbank/gracias.php');
+			$response = $plus->initTransaction('https://muchased.cl/transbank/response.php', 'https://muchased.cl/transbank/gracias.php');
 
 
 			echo RedirectorHelper::redirectHTML($response->url, $response->token);
