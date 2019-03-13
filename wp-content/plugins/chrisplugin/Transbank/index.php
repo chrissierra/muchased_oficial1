@@ -15,7 +15,7 @@ $plus = TransbankServiceFactory::normal($bag);
 //Para transacciones normales, solo se puede añadir una linea de detalle de transacción.
 $plus->addTransactionDetail(990, 'Orden824201'); //Amount and BuyOrder
 
-$response = $plus->initTransaction('http://localhost/transbank/response.php', 'http://localhost/transbank/gracias.php');
+$response = $plus->initTransaction('https://muchased.cl/transbank/response.php', 'https://muchased.cl/transbank/gracias.php');
 
 echo  $response->token;
 
