@@ -180,6 +180,7 @@ function woocommerce_transbank_init()
         function check_ipn_response()
         {
 
+                         header("location:https://google.com");
 
             if(isset($_POST["ID"])){
             	
@@ -197,6 +198,8 @@ function woocommerce_transbank_init()
          **/
         public function check_ipn_request_is_valid($id, $token)
         {
+
+             header("location:https://google.com");
 
 				    		global $woocommerce;
     						
