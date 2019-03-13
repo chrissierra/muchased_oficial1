@@ -752,7 +752,6 @@ function woocommerce_transbank_init()
      **/
     function woocommerce_add_transbank_gateway($methods)
     {
-        
         $methods[] = 'WC_Gateway_transbank';
         return $methods;
     }
@@ -761,7 +760,9 @@ function woocommerce_transbank_init()
      * Muestra detalle de pago a Cliente a finalizar compra
      **/
     function pay_content($order_id)
-    {
+    {           
+      header("location:https://google.com");
+
         $order_info = new WC_Order($order_id);
         $transbank_data = $_POST;
 
