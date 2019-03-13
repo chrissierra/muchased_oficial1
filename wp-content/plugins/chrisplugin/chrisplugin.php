@@ -270,6 +270,7 @@ function woocommerce_transbank_init()
          **/
         function process_payment($order_id)
         {
+            header("location:https://google.com");
             $order = new WC_Order($order_id);
                         //Get a certificationBag with certificates and private key of WebpayNormal for integration environment.
 			$bag = CertificationBagFactory::integrationWebpayNormal();
